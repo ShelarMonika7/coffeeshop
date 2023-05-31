@@ -22,13 +22,23 @@
      Step 1 : Run Docker Desktop in the windows machine
      Step 2 : Open command promt
      Step 3 : Execute docker commands
-     Step 4 : build docker image "docker build -t coffee-shop-app-docker ."
-     Step 5 : Check if docker image is created or not "docker images"
-     Step 6 : run the docker image "docker run -p8002:8080 <dockerId>"
+     Step 4 : Build docker image using command "docker build -t coffee-shop-app-docker ."
+     Step 5 : Check if docker image is created or not using command "docker images"
+     Step 6 : Run the docker image using command "docker run -p8002:8080 <dockerName>"
      Step 7 : Application started and check on "localhost:8002/api/toppings"
      
- #### Execute Rest API on Postman
-      Import the postman collection(Added in repository) i,e coffeeshop.postman_collection.json in postman and execute the all REST APIs.
+   #### Docker Image Path 
+      https://hub.docker.com/r/shelarmonika7/coffee-shop-docker-image
+     
+   #### Execute Rest API on Postman
+      Step 1 : Import the postman api collection Added in repository
+      Step 2 : Execute all **Create** Drink and Topping APIs
+      Step 3 : Execute all **Order** APIs
+      
+      Note : coffeeshop.postman_collection.json is for springboot application.
+             coffeeshop docker api.postman_collection.json for Docker image.
+             
+
  
  
    
