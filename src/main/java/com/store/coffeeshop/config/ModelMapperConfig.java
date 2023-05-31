@@ -1,12 +1,12 @@
-package com.store.coffeeshop.utils.client.config;
+package com.store.coffeeshop.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ModelMapperUtil extends ModelMapper {
+public class ModelMapperConfig extends ModelMapper {
 
-        public ModelMapperUtil() {
+        public ModelMapperConfig() {
             this.getConfiguration().setFieldMatchingEnabled(true).setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE);
         }
 

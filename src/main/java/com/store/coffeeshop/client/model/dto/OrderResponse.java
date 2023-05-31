@@ -1,4 +1,4 @@
-package com.store.coffeeshop.utils.client.repository.model.dto;
+package com.store.coffeeshop.client.model.dto;
 
 import lombok.Data;
 

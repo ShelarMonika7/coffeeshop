@@ -1,12 +1,12 @@
-package com.store.coffeeshop.utils.client.service.impl;
+package com.store.coffeeshop.client.service.impl;
 
-import com.store.coffeeshop.utils.client.repository.model.Cart;
-import com.store.coffeeshop.utils.client.repository.model.CartItem;
-import com.store.coffeeshop.utils.client.repository.model.Order;
-import com.store.coffeeshop.utils.client.repository.model.dto.DrinkDTO;
-import com.store.coffeeshop.utils.client.repository.model.dto.DrinkReques;
-import com.store.coffeeshop.utils.client.repository.model.dto.OrderRequest;
-import com.store.coffeeshop.utils.client.repository.model.dto.OrderResponse;
+import com.store.coffeeshop.client.model.dto.DrinkReques;
+import com.store.coffeeshop.client.model.Cart;
+import com.store.coffeeshop.client.model.CartItem;
+import com.store.coffeeshop.client.model.Order;
+import com.store.coffeeshop.client.model.dto.DrinkDTO;
+import com.store.coffeeshop.client.model.dto.OrderRequest;
+import com.store.coffeeshop.client.model.dto.OrderResponse;
 import com.store.coffeeshop.exception.BadRequestException;
 import com.store.coffeeshop.exception.FailedToCalculateException;
 import com.store.coffeeshop.exception.FailedToCreateException;
@@ -15,10 +15,10 @@ import com.store.coffeeshop.admin.model.Topping;
 import com.store.coffeeshop.admin.repository.DrinkRepository;
 import com.store.coffeeshop.admin.repository.ToppingRepository;
 import com.store.coffeeshop.utils.MsgConstants;
-import com.store.coffeeshop.utils.client.repository.CartItemRepository;
-import com.store.coffeeshop.utils.client.repository.CartRepository;
-import com.store.coffeeshop.utils.client.repository.OrderRepository;
-import com.store.coffeeshop.utils.client.service.OrderService;
+import com.store.coffeeshop.client.repository.CartItemRepository;
+import com.store.coffeeshop.client.repository.CartRepository;
+import com.store.coffeeshop.client.repository.OrderRepository;
+import com.store.coffeeshop.client.service.OrderService;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +27,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -140,12 +141,12 @@ public class OrderServiceImpl implements OrderService {
         try {
             if (cartAmount > 12 && drinks.size() >= 3) {
                 double discountedAmountWithDiscount = cartAmount - (cartAmount * 0.25);
-                double amountWithOneDrinkFree = cartAmount - drinks.get(0).getTotalAmount();
+                double amountWithOneDrinkFree = cartAmount - makeLowestAmountDrink(drinks);
                 return Math.min(discountedAmountWithDiscount, amountWithOneDrinkFree);
             } else if (cartAmount > 12) {
                 return cartAmount - (cartAmount * 0.25);
             } else if (drinks.size() >= 3) {
-                return cartAmount - drinks.get(0).getTotalAmount();
+                return cartAmount - makeLowestAmountDrink(drinks);
             } else {
                 return cartAmount;
             }
@@ -153,6 +154,11 @@ public class OrderServiceImpl implements OrderService {
             logger.error("Failed to calculate discounted amount: {}", e.getMessage(), e);
             throw new FailedToCalculateException(MsgConstants.FAILED_TO_CALCULATE);
         }
+    }
+
+    private double makeLowestAmountDrink(List<DrinkDTO> drinks) {
+        drinks.sort(Comparator.comparingDouble(DrinkDTO::getAmount));
+        return drinks.get(0).getTotalAmount();
     }
 }
 

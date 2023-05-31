@@ -1,6 +1,6 @@
-package com.store.coffeeshop.utils.client.repository;
+package com.store.coffeeshop.client.repository;
 
-import com.store.coffeeshop.utils.client.repository.model.Order;
+import com.store.coffeeshop.client.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.store.coffeeshop.utils.client.repository.model.dto;
+package com.store.coffeeshop.client.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +9,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderRequest {
-
-    private List<DrinkReques> drinks;
-
+public class DrinkReques {
+    private String name;
+    private List<String> toppings;
 }

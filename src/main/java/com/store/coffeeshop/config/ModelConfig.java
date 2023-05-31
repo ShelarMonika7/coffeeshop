@@ -1,4 +1,4 @@
-package com.store.coffeeshop.utils.client.config;
+package com.store.coffeeshop.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

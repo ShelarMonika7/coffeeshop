@@ -1,6 +1,6 @@
-package com.store.coffeeshop.utils.client.repository;
+package com.store.coffeeshop.client.repository;
 
-import com.store.coffeeshop.utils.client.repository.model.Cart;
+import com.store.coffeeshop.client.model.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

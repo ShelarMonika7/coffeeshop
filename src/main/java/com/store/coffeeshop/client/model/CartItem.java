@@ -1,4 +1,4 @@
-package com.store.coffeeshop.utils.client.repository.model;
+package com.store.coffeeshop.client.model;
 
 import com.store.coffeeshop.admin.model.Drink;
 import com.store.coffeeshop.admin.model.Topping;
@@ -30,7 +30,7 @@ public class CartItem {
     @JoinColumn(name = "drink_id")
     private Drink drink;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "cart_item_topping",
             joinColumns = @JoinColumn(name = "cart_item_id"),
@@ -43,3 +43,5 @@ public class CartItem {
     private Cart cart;
 
 }
+
+
