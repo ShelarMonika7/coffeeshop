@@ -20,27 +20,27 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(FailedToFetchException.class)
     public ResponseEntity<String> FailedToFetchException(FailedToFetchException e) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(e.getMessage());
     }
 
     @ExceptionHandler(FailedToCreateException.class)
     public ResponseEntity<String> FailedToCreateException(FailedToCreateException e) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(e.getMessage());
     }
 
     @ExceptionHandler(FailedToUpdateException.class)
     public ResponseEntity<String> FailedToUpdateException(FailedToUpdateException e) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(e.getMessage());
     }
 
     @ExceptionHandler(FailedToDeleteException.class)
     public ResponseEntity<String> FailedToDeleteException(FailedToDeleteException e) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(e.getMessage());
     }
 
     @ExceptionHandler(FailedToCalculateException.class)
     public ResponseEntity<String> FailedToCalculateException(FailedToCalculateException e) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(e.getMessage());
     }
 
     @ExceptionHandler(Exception.class)
