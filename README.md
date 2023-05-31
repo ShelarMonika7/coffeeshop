@@ -9,12 +9,14 @@
     Step 2 : execute below link for Swagger ui and Database
 
      H2 In Memeory database is used and below is the localurl for H2. 
-     Database link : http://localhost:8080/h2-console
+     Database url : http://localhost:8080/h2-console
               username : sa   
               Password : password
               
-     Swagger UI is used to document the APIs and below is the local url Swagger.     
-     Swagger Ui link : http://localhost:8080/swagger-ui.html
+  #### Swagger API Documentation            
+     Swagger UI is used to document the APIs     
+     Swagger Ui localhost url : http://localhost:8080/swagger-ui.html
+     Swagger Docker image url : http://localhost:8002/swagger-ui.html
      
    #### Docker Configuration
    
