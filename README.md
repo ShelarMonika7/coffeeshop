@@ -27,6 +27,8 @@
      Step 6 : run the docker image "docker run -p8002:8080 <dockerId>"
      Step 7 : Application started and check on "localhost:8002/api/toppings"
      
- #### Execute the postman collection APIs     
+ #### Execute Rest API on Postman
+      Import the postman collection(Added in repository) i,e coffeeshop.postman_collection.json in postman and execute the all REST APIs.
+ 
  
    
