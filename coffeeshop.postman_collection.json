@@ -1,0 +1,635 @@
+{
+	"info": {
+		"_postman_id": "3199ceee-145a-4ce1-a815-24a48db29d09",
+		"name": "coffeeshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin api",
+			"item": [
+				{
+					"name": "drink api",
+					"item": [
+						{
+							"name": "Add Drink1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 1,\r\n    \"name\": \"Black Coffee\",\r\n    \"amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/drinks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drinks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Drink2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 4,\r\n    \"name\": \"Tea\",\r\n    \"amount\": 3\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/drinks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drinks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Drink3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 3,\r\n    \"name\": \"Mocha\",\r\n    \"amount\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/drinks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drinks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Drink4",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 4,\r\n    \"name\": \"Latte\",\r\n    \"amount\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/drinks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drinks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Drinks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/drinks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drinks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Drink by Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/drinks/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drinks",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Drink",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 4,\r\n    \"name\": \"Latte\",\r\n    \"amount\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/drinks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drinks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Drink",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/drinks/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"drinks",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "topping api",
+					"item": [
+						{
+							"name": "Add Topping1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 1,\r\n    \"name\": \"Lemon\",\r\n    \"amount\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/toppings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"toppings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Topping2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 2,\r\n    \"name\": \"Hazelnut syrup\",\r\n    \"amount\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/toppings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"toppings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Topping3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 3,\r\n    \"name\": \"Milk\",\r\n    \"amount\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/toppings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"toppings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Most Used Topping for Drink",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"drinks\": [\r\n    {\r\n      \"name\": \"Black Coffee\",\r\n      \"toppings\": [\"Lemon\"]\r\n    },\r\n    {\r\n      \"name\": \"Latte\",\r\n      \"toppings\": [\"Lemon\"]\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/toppings/most-used/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"toppings",
+										"most-used",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Toppings",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/toppings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"toppings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get topping by Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/toppings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"toppings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Topping",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Lemon\",\r\n    \"amount\": 3.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/toppings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"toppings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Topping",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/toppings/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"toppings",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "client api",
+			"item": [
+				{
+					"name": "order",
+					"item": [
+						{
+							"name": "Make order for Drink >=3 in the cart",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"drinks\": [\r\n    {\r\n      \"name\": \"Black Coffee\",\r\n      \"toppings\": []\r\n    },\r\n    {\r\n      \"name\": \"Tea\",\r\n      \"toppings\": []\r\n    },\r\n    {\r\n      \"name\": \"Tea\",\r\n      \"toppings\": []\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "make order where drink >=3 and amount >12",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"drinks\": [\r\n    {\r\n      \"name\": \"Black Coffee\",\r\n      \"toppings\": [\"Milk\"]\r\n    },\r\n    {\r\n      \"name\": \"Latte\",\r\n      \"toppings\": [\"Hazelnut syrup\", \"Milk\"]\r\n    },\r\n    {\r\n      \"name\": \"Mocha\",\r\n      \"toppings\": [\"Milk\"]\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Make order Amount < 12 and Drink <3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"drinks\": [\r\n    {\r\n      \"name\": \"Black Coffee\",\r\n      \"toppings\": [\"Milk\"]\r\n    },\r\n    {\r\n      \"name\": \"Tea\",\r\n      \"toppings\": [\"Milk\"]\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Make order for amount >12",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"drinks\": [\r\n    {\r\n      \"name\": \"Black Coffee\",\r\n      \"toppings\": [\"Milk\"]\r\n    },\r\n    {\r\n      \"name\": \"Tea\",\r\n      \"toppings\": [\"Milk\",\"Lemon\"]\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"order"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
